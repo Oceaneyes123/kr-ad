@@ -50,36 +50,6 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
 
-  <script>
-
-   // if (navigator.share === undefined){
-   //       alert('Undefined!');
-   //   }
-
-    let coupon = Math.random().toString(36).replace(/[^a-zA-Z0-9]+/g, '').substr(0, 8);
-
-    var shareData = {
-      title: 'test',
-      text: '메가토킹 “친구추천” EVENT● 자세히 보기 https://referal.link/_m/' + coupon
-            }
-
-
-
-
-
-    const btn = document.querySelector('.share');
-
-    btn.addEventListener('click', async () => {
-      console.log('hi')
-      try {
-        await navigator.share(shareData)
-        console.log("okay")
-      } catch (err) {
-        alert(err)
-      }
-    });
-  </script>
-
 </body>
 
 <style>
