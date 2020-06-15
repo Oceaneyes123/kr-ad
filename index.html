@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta property="og:title" content="Megatalking - Level Test"/>
+  <meta property="og:description" content="Get your free level test "/>
+  <meta property="og:image" content="img/sb_thumb.jpg"/>
+  <meta property="og:image:width" content="600"/>
+  <meta property="og:image:height" content="315"/>
+  <meta property="og:url" content="https://oceaneyes123.github.io/kr-ad"/>
+  <meta property="og:site_name" content="Megatalking"/>
+  <meta property="og:type" content="website"/>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <title>KR Ad</title>
+</head>
+<body>
+
+  <div class="container-fluid px-0 px-sm-3" style="background:#f2f4f6;">
+    <div class="container px-0 px-sm-3 text-center">
+      <div class="card h-100 mx-auto border-0" style="max-width:700px">
+        <div class="pt-4 pb-4 px-4 row" style="width:100%">
+          <div class="col text-left">
+            <img width="70px" src="img/logo_ad.png" class="css-7ip7ji e1uiecd51">
+          </div>
+          <div class="col text-right">
+            <span class="text text--word-break typography-t6 text--font-weight-regular text--display-inline-block" style="color:var(--adaptiveGrey700)">신고</span>
+          </div>
+        </div>
+        <div class="text-center mb-0 pb-0">
+          <span style="color:#191F28;font-family:'SF Pro KR';font-size:30px;font-weight:900">메가토킹</span>
+        </div>
+        <div class="text-center mb-5">
+          <span style="color:#191F28;font-family:'SF Pro KR';font-size:30px;font-weight:900">친구추천 이벤트</span>
+        </div>
+        <div class="text-center">
+          <img width="100%" height="auto" style="border:0" src="img/sb_img.png">
+        </div>
+      </div>
+      <div class="col-md-7 col-sm-8 col-lg-5" style="position:fixed;bottom:20px;left: 50%; transform: translate(-50%, 0);">
+        <button type="button" class="share btn btn-block text-white" style="background-color:#132a53;height:2em;font-size:2em">
+          <span class="my-3">추천하기</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script>
+
+   // if (navigator.share === undefined){
+   //       alert('Undefined!');
+   //   }
+
+    let coupon = Math.random().toString(36).replace(/[^a-zA-Z0-9]+/g, '').substr(0, 8);
+
+    var shareData = {
+      title: 'test',
+      text: '메가토킹 “친구추천” EVENT● 자세히 보기 https://oceaneyes123.github.io/kr-ad/discount.php?r=' + coupon
+            }
+
+
+
+
+
+    const btn = document.querySelector('.share');
+
+    btn.addEventListener('click', async () => {
+      console.log('hi')
+      try {
+        await navigator.share(shareData)
+        console.log("okay")
+      } catch (err) {
+        alert(err)
+      }
+    });
+  </script>
+
+</body>
+
+<style>
+
+  body {
+    font-family: 'SF Pro KR', 'SF Pro Display', 'SF Pro Icons', -apple-system, BlinkMacSystemFont, 'Basier Square', 'Apple SD Gothic Neo', Roboto, 'Noto Sans KR', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-size: 1rem;
+  }
+</style>
+</html>
